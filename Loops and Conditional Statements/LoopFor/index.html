@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>repl.it</title>
+	<link href="style.css" rel="stylesheet" type="text/css" />
+
+
+</head>
+
+<body>
+
+ <!-- > <script type="text/javascript" src="scripts.js"  ></script> -->
+ 
+	<form name="selectForm">
+		<p>
+			<label for="musicTypes">Choose some music types, then click the button below:</label>
+    <select id="musicTypes" name="musicTypes" multiple="multiple">
+      <option selected="selected">R&B</option>
+      <option>Jazz</option>
+      <option>Blues</option>
+      <option>New Age</option>
+      <option>Classical</option>
+      <option>Opera</option>
+    </select>
+  </p>
+  <p><input id="btn" type="button" value="How many are selected?" /></p>
+</form>
+
+<script>
+
+  function opcoes() {
+    let total = document.getElementById('musicTypes').length;
+    return total;
+  }
+
+  function howMany(selectObject) {
+    let contador = 0;
+    for (i=0; i < selectObject.options.length; i++) {
+      if (selectObject.options[i].selected) {
+        contador++;
+      }
+    }
+    return contador;
+  }
+
+  let btn = document.getElementById('btn');
+  btn.addEventListener('click', function() {
+    alert('Total de opções: ' + opcoes() + '\nNumero de opções selecionadas: ' + howMany(document.selectForm.musicTypes));
+  })
+
+</script>
+
+  </body>
+</html>
