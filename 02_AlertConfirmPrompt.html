@@ -1,0 +1,38 @@
+<html>
+
+  <head>
+    <title>
+      JavaScript program for an Alert, Cnofirm and Prompt
+    </title>
+    <style>
+      body {
+        color: red;
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <script>
+      alert("An Alert is generated");
+
+      let a = confirm("Sure you want to leave?")
+
+      if (a == true) {
+        document.write("Pressed OK");
+      } else {
+        document.write("Pressed Cancel");
+      }
+
+      let b = prompt("Write why you want to leave?")
+
+      document.write(a + "<br>");
+
+      document.write("Motive for leaving: " + b);
+
+      document.close();
+
+    </script>
+  </body>
+
+</html>
